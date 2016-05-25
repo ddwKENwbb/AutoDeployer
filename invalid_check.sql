@@ -1,0 +1,7 @@
+SELECT OWNER || chr(9) || 'ALTER '||OBJECT_TYPE|| chr(9) || OBJECT_NAME ||' COMPILE;'
+  FROM ( SELECT OBJECT_TYPE,OBJECT_NAME,OWNER
+           FROM ALL_OBJECTS
+          WHERE STATUS = 'INVALID'
+            AND OWNER IN ('MY','INN','MENTE','I','EZ','HOTEL','AIR','CM','CAR','BUS','DDP')
+       )
+;
